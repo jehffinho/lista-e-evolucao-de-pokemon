@@ -1,0 +1,181 @@
+ body {
+    background-color: rgb(74, 92, 194);
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 900px;
+
+    
+}
+
+body.modo-escuro{
+    background-color: #131212;
+    color: #e4adad;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+header .logo,
+header .imagem-botao{
+    width: 22px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .imagem-botao:hover{
+
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.pokemonCard {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(238, 12, 106, 0.404);
+    width: 160px;
+    height: 240px;
+    margin: 15px;
+    border-radius: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2.8s ;
+    cursor: pointer;
+    transform: scale(1.05);
+   
+}
+
+.pokemonCard:active{
+    transform: scale(1.80);
+    
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.front-face,
+.back-face {
+  
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+  
+}
+
+.front-face{
+
+    transform: rotateY(180deg);
+   background-color: rgba(32, 36, 37, 0.534);
+   width: 160px;
+    height: 240px;
+    border-radius: 20px;
+    
+}
+
+.back-face{
+    flex-direction: column;
+    margin-left: 10px;
+    
+    
+}
+.pokemonCard.flip{
+    transform: rotatey(180deg);
+}
+
+.front-face .nome,
+.back-face .nome {
+    display: flex;
+    gap: 15px;
+    margin: 6px;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 4px;
+    color: rgb(58, 17, 4);
+    font-size: 18px;
+}
+
+.front-face .tipo,
+.back-face .tipo{
+    margin: 20px;
+    border: 1px solid ;
+    border-radius: 10px;
+}
+
+.descricao {
+    
+    text-align: left;
+    color: rgb(94, 154, 30);
+}
+
+.descricao span{
+    color: black;
+}
+
+.eletrico{
+    background-color: rgb(248, 212, 9);
+  
+}
+
+.fogo{
+    background-color: rgb(199, 12, 12);
+    
+}
+
+.felino{
+    background-color: rgb(129, 126, 126);
+  
+}
+
+.agua{
+    background-color: rgb(9, 11, 138);
+  
+}
+
+
+.menu-lateral{
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone{
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+    
+
+}
+
+.menu-lateral .icone:hover{
+    transform: scale(1.3);
+}
+

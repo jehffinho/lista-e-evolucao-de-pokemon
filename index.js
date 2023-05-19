@@ -1,4 +1,5 @@
-alert("Clique no Pokemon que deseja ver a Evolução")
+alert("Clique nos pokemons para ver sua Evolução e no Sol para q torne noite!") 
+
 
 const botaoAlterarTema = document.getElementById("botao-alterar-tema")
 const body = document.querySelector("body")
